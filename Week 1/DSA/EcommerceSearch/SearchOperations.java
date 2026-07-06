@@ -13,7 +13,6 @@ public class SearchOperations {
         return null;
     }
 
-    // Binary Search
     public static Product binarySearch(Product[] products, int targetId) {
 
         int left = 0;
