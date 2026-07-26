@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  margin-top: 40px;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #1976d2;
+  color: white;
+}
+
+th,
+td {
+  padding: 10px 20px;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+}
