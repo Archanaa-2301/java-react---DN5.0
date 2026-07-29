@@ -1,7 +1,5 @@
 package com.cognizant.ormlearn;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +25,16 @@ public class OrmLearnApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        testFindCountryByCode();
+    }
+
+    private void testFindCountryByCode() {
 
         LOGGER.info("Start");
 
-        List<Country> countries = countryService.getAllCountries();
+        Country country = countryService.findCountryByCode("IN");
 
-        countries.forEach(country -> LOGGER.debug("{}", country));
+        LOGGER.debug("{}", country);
 
         LOGGER.info("End");
     }

@@ -20,4 +20,9 @@ public class CountryService {
     public List<Country> getAllCountries() {
         return countryRepository.findAll();
     }
+
+    @Transactional
+    public Country findCountryByCode(String code) {
+        return countryRepository.findById(code).orElse(null);
+    }
 }
